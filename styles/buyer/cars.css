@@ -1,0 +1,287 @@
+body {
+  position: relative;
+  overflow-y: scroll;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logout {
+  background-color: #3e6ae1;
+  width: max-content;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Main Page */
+.car-title {
+  font-size: 2em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: sticky;
+  z-index: 50;
+  top: 0em;
+  background-color: white;
+  height: 100%;
+}
+
+#price-select {
+  flex-basis: 200px;
+  height: fit-content;
+  padding: 7px;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 1px;
+  outline: none;
+  border: none;
+  background-color: var(--nav-link-hover-color);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar */
+.filter-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 300px;
+  font-size: 1em;
+  background-color: #f4f4f4;
+}
+
+@media screen and (max-width: 900px) {
+  .filter-container {
+    display: none;
+  }
+}
+
+.brand-filter-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.brand-checkbox-container {
+  display: flex;
+  gap: 10px;
+}
+
+.transmission-filter-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.transmission-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-filter-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  gap: 20px;
+}
+
+.color-checkbox {
+  display: none;
+}
+
+.color-selected {
+  border: 3px solid transparent;
+  border-radius: 50%;
+  width: fit-content;
+  padding: 2px;
+}
+
+.color-label {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  margin: 6px;
+  box-shadow: 0 3px 6px rgb(0, 127, 166);
+  cursor: pointer;
+}
+
+.fuel-filter-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.fuel-type-container {
+  display: flex;
+  flex-direction: column;
+}
+.car-content-container {
+  padding: 20px;
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+/* Car List */
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.car-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-brand-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.car-brand,
+.car-price {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 640px) {
+  .car-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .car-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-brand,
+  .car-price {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+}
+
+.car-minor-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.car-minor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mileage-text {
+  font-size: 0.8em;
+}
+
+.car-image {
+  display: none;
+  width: 550px;
+}
+
+@media screen and (max-width: 1500px) {
+  .car-image {
+    display: none;
+    width: 500px;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .car-image {
+    display: none;
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.car-images-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+.left-arrow-icon,
+.right-arrow-icon {
+  position: absolute;
+  top: 200px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .left-arrow-icon,
+  .right-arrow-icon {
+    top: 150px;
+  }
+}
+
+.left-arrow-icon {
+  left: 3px;
+}
+.right-arrow-icon {
+  right: 3px;
+}
+
+.car-image-active {
+  display: block;
+}
+
+.view-car-btn {
+  background-color: white;
+  border: 3px solid black;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.view-car-btn:hover {
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}

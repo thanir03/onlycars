@@ -1,0 +1,162 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0px 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link-container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link-container {
+    gap: 0.5em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-link-container {
+    display: none;
+  }
+}
+
+.nav-link {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-link-hover-color);
+}
+
+.hamburger-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logout {
+  background-color: #3e6ae1;
+  width: max-content;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.img {
+  height: 400px;
+}
+main {
+  display: flex;
+  min-height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.booking-container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .booking-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.car-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.car-container {
+  display: flex;
+  flex: 0.6;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.car-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.major-details {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-now {
+  width: max-content;
+  height: max-content;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #3e6ae1;
+  border: 2px solid white;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pay-now:hover {
+  filter: brightness(0.9);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px;
+}
+
+.pricing-container {
+  padding-right: 40px;
+  padding-top: 40px;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bolder;
+}

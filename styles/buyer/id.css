@@ -1,0 +1,271 @@
+html {
+  position: relative;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-bar {
+  padding: 15px;
+  position: sticky;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  top: 0em;
+  background: #fdfdfd;
+  z-index: 100;
+}
+
+.back-btn {
+  cursor: pointer;
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
+@media screen and (max-width: 1393px) {
+  .main-content-container {
+    flex-direction: column;
+  }
+}
+
+.car-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  position: relative;
+  overflow: hidden;
+  position: fixed;
+  height: max-content;
+}
+@media screen and (max-width: 1393px) {
+  .car-image-container {
+    width: 100%;
+    position: relative;
+    height: max-content;
+  }
+}
+
+.car-dummy-container {
+  flex: 1;
+  width: 200px;
+  padding: 100px;
+}
+@media screen and (max-width: 1393px) {
+  .car-dummy-container {
+    width: 0;
+    padding: 0;
+  }
+}
+
+.left-arrow-icon,
+.right-arrow-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-arrow-icon {
+  left: 10px;
+}
+
+.right-arrow-icon {
+  right: 10px;
+}
+
+.car-image {
+  display: none;
+  max-width: 100%;
+  height: 93vh;
+}
+
+@media screen and (max-width: 1393px) {
+  .car-image {
+    height: max-content;
+  }
+}
+
+.image-active {
+  display: block;
+}
+.car-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 20px;
+}
+
+.model-name {
+  display: flex;
+  gap: 20px;
+}
+
+.brand-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.brand-name {
+  font-size: 2em;
+}
+.car-minor-details {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.mileage-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.door-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transmission-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.seat-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bold-text {
+  font-weight: bolder;
+}
+
+.price {
+  margin-top: 40px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.price-details-text {
+  font-size: 10px;
+}
+
+.fuel-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vehicle-details-text {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.car-major-details {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+
+.color {
+  padding: 20px;
+  width: 5px;
+  padding: 25px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.color-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-cart-btn {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid #3e6ae1;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.book-now-btn {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #3e6ae1;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.book-now-btn:hover,
+.add-cart-btn:hover {
+  filter: brightness(0.9);
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.book-now-btn:disabled,
+.add-cart-btn:disabled {
+  background-color: #dddddd;
+  color: #999999;
+  border: 1px solid #cccccc;
+  cursor: not-allowed;
+}
+
+.sold {
+  font-size: 20px;
+  font-weight: bold;
+}
