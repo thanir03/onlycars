@@ -82,13 +82,15 @@ imageInput.addEventListener("change", (event) => {
   console.log(urls);
   let html = "";
   for (let i = 0; i < urls.length; i++) {
-    html += `<img width='150px' src=${urls[i]} alt=${"hello"} />`;
+    html += `<img width='175px' src=${urls[i]} alt=${"hello"} />`;
   }
 
   if (err) {
     document.querySelector(
       `.img-error`
     ).innerHTML = `<p class='error'>${err}</p>`;
+  } else {
+    document.querySelector(`.img-error`).innerHTML = ``;
   }
   imageContainer.innerHTML = html;
 });

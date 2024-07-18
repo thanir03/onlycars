@@ -88,7 +88,8 @@ body {
 
 .input-bx {
   width: 50%;
-  height: 700px;
+  height: max-content;
+  min-height: 700px;
   padding: 40px;
   float: left;
   display: block;
@@ -111,6 +112,7 @@ body {
 
   .input-bx {
     width: 100%;
+    border-radius: 30px;
   }
 }
 
@@ -292,6 +294,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
 }
 

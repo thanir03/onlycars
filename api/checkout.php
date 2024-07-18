@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     ],
     'mode' => 'payment',
     'success_url' => $YOUR_DOMAIN . '/buyer/success.php',
-    'cancel_url' => $YOUR_DOMAIN . '/buyer/cancel.html', 
+    'cancel_url' => $YOUR_DOMAIN . '/buyer/error.php', 
     "customer" => $customer->id
     ]);
     echo json_encode(array("status" => "success", "url" => $checkout_session->url));
